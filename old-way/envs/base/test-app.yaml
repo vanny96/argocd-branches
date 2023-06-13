@@ -6,6 +6,7 @@ metadata:
 spec:
   destination:
     server: https://kubernetes.default.svc
+    namespace: dev-environment
   project: root-app
   source:
     repoURL: ghcr.io/vanny96

@@ -1,3 +1,6 @@
 - op: add
   path: /spec/destination/namespace
   value: prod-environment
+- op: replace
+  path: /metadata/name
+  value: test-app-old-prod
