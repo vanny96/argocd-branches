@@ -10,3 +10,4 @@ patches:
     target:
       kind: Application
       name: test-app-old
+      namespace: argocd

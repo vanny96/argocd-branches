@@ -2,11 +2,15 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: test-app-old
+  namespace: argocd
 spec:
   destination:
-    namespace: goldenalgo
     server: https://kubernetes.default.svc
   project: root-app
   source:
     repoURL: ghcr.io/vanny96
     chart: helloworld-helm
+
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
