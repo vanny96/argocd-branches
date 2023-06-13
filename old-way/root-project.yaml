@@ -16,5 +16,9 @@ spec:
       kind: '*'
 
   destinations:
-    - namespace: argocd
+    - namespace: dev-environment
+      server: https://kubernetes.default.svc
+    - namespace: preprod-environment
+      server: https://kubernetes.default.svc
+    - namespace: prod-environment
       server: https://kubernetes.default.svc

@@ -4,6 +4,4 @@ metadata:
   name: test-app-old
 spec:
   source:
-    targetRevision: ???
-    helm:
-      parameters: ???
+    targetRevision: 1.0.0

@@ -7,6 +7,5 @@ spec:
     namespace: goldenalgo
     server: https://kubernetes.default.svc
   source:
-    repoURL: ???
-    chart: ???
-    targetRevision: ???
+    repoURL: ghcr.io/vanny96
+    chart: helloworld-helm
