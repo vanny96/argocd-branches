@@ -7,7 +7,7 @@ spec:
   destination:
     server: https://kubernetes.default.svc
     namespace: dev-environment
-  project: root-app
+  project: root-app-old
   source:
     repoURL: ghcr.io/vanny96
     chart: helloworld-helm
