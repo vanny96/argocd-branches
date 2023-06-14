@@ -5,7 +5,7 @@ metadata:
   namespace: argocd
 spec:
   source:
-    targetRevision: 2.0.0
+    targetRevision: 1.0.2
     helm:
       parameters:
         - name: helloworld.environment
