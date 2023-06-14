@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: root-app-new
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  description: Test project to delete
+
+  sourceRepos:
+    - '*'
+
+  clusterResourceWhitelist:
+    - group: '*'
+      kind: '*'
+
+  destinations:
+    - namespace: argocd
+      server: https://kubernetes.default.svc
+    - namespace: dev-environment
+      server: https://kubernetes.default.svc
+    - namespace: preprod-environment
+      server: https://kubernetes.default.svc
+    - namespace: prod-environment
+      server: https://kubernetes.default.svc

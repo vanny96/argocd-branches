@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: dev-app-new
+  namespace: argocd
+spec:
+  destination:
+    namespace: argocd
+    server: https://kubernetes.default.svc
+
+  project: root-app-new
+
+  source:
+    repoURL: https://github.com/vanny96/argocd-branches
+    path: new-way/envs/dev
+    targetRevision: dev

@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: test-app-new
+  namespace: argocd
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: dev-environment
+  project: root-app-new
+  source:
+    repoURL: ghcr.io/vanny96
+    chart: helloworld-helm
+
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true

@@ -1,0 +1,13 @@
+
+resources:
+  - ../base
+
+patchesStrategicMerge:
+  - test-app-patch.yaml
+
+patches:
+  - path: set-project-namespace.yaml
+    target:
+      kind: Application
+      name: test-app-new
+      namespace: argocd
